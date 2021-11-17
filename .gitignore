@@ -1,0 +1,9 @@
+/node_modules/
+/public/build/
+__pycache__
+/.venv/
+/.mypy_cache/
+
+.DS_Store
+yarn.lock
+poetry.lock
