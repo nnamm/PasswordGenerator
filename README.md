@@ -27,6 +27,7 @@ uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 **Note**: Wrote "pynvim" in pyproject.toml. It is for the defx plugin.
+
 **Note**: My backend env is Ubuntu on Parallels. So, it starts with 0.0.0.0:8000 to request from Svelte (macOS). Would you please start uvicorn according to the env you are going to try?
 
 # Motivation
