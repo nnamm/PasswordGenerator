@@ -1,10 +1,11 @@
 # PasswordGenerator
 Password generation app using Svelte and FastAPI. 
 
-* Generate passwords of 8 to 128 characters by a browser.
+* Generate passwords (max 128 characters) by a browser.
 * The characters used are A-Z / a-z (default).
-* Optionally specify numbers (0-9) and punctuation.
+* Optionally digits (0-9) and symbols.
 * Specify any text you want.
+* In the case of "input text", add today's date (mmdd) to the end of the password.
 * Currently, you can also input double-byte characters such as Japanese.
 
 # Requirements
