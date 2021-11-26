@@ -1,3 +1,5 @@
+"""Password Generator API"""
+
 import random
 from datetime import datetime
 from string import ascii_letters, digits, punctuation
@@ -21,6 +23,8 @@ app.add_middleware(
 
 
 class RequestBody(BaseModel):
+    """RequestBody struct"""
+
     passwd_length: int
     digits_length: int
     symbols_length: int
@@ -52,8 +56,8 @@ async def generate_passwd(req: RequestBody):
     # Input text & Today flag
     if req.is_include_today:
         today = datetime.now().strftime("%m%d")
-        pw = create_random_chars(req.input_text, req.passwd_length - len(today))
-        return {"Passwd": pw + today}
+        pw_chars = create_random_chars(req.input_text, req.passwd_length - len(today))
+        return {"Passwd": pw_chars + today}
 
     # Input text
     if len(req.input_text) > 0:
