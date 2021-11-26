@@ -4,7 +4,7 @@ import secrets
 
 
 def create_random_chars(letters: str, length: int) -> str:
-    """Create random charactors based letters.
+    """Create random characters based letters.
 
     Args:
         letters (str): Chars from which it was generated

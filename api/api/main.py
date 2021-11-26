@@ -34,12 +34,12 @@ class RequestBody(BaseModel):
 
 @app.post("/gen_passwd/")
 async def generate_passwd(req: RequestBody):
-    """Generate a password accoding to the parameters.
+    """Generate a password according to the parameters.
 
-    This funcion works using alpabets(string.ascii_letters) by default.
-    In the case of "Specify digits length", works using digits(string.digis).  In the
+    This function works using alphabets(string.ascii_letters) by default.
+    In the case of "Specify digits length", works using digits(string.digits).  In the
     case of "Specify symbols length", works using symbols(string.punctuation). Each will
-    contain the specified length of digis/symbols.
+    contain the specified length of digits/symbols.
     In the case of "Input text", works using inputted text.
 
     Args:
@@ -78,7 +78,7 @@ async def generate_passwd(req: RequestBody):
         if req.symbols_length:
             digits_symbols += create_random_chars(punctuation, req.symbols_length)
             tmp_length -= req.symbols_length
-        aplhabet = create_random_chars(ascii_letters, tmp_length)
+        alphabet = create_random_chars(ascii_letters, tmp_length)
 
-        pw_chars = random.sample((aplhabet + digits_symbols), req.passwd_length)
+        pw_chars = random.sample((alphabet + digits_symbols), req.passwd_length)
         return {"Passwd": "".join(pw_chars)}
