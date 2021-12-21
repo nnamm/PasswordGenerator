@@ -5,3 +5,4 @@ public/build
 .DS_Store
 yarn.lock
 poetry.lock
+package-lock.json

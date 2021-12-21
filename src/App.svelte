@@ -10,7 +10,7 @@
 
   const generatePasswd = async () => {
     // IP address is Ubuntu on Parallels
-    const endpoint = 'http://10.211.55.21:8000/gen_passwd/';
+    const endpoint = 'http://10.211.55.4:8000/gen_passwd/';
     const params = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
